@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentforge-stream-plugin"
+version = "1.0.0"
+description = "Test rig for AgentForge SSE streaming — hard-coded 3-event stream, backoff helpers."
+requires-python = ">=3.12"
+dependencies = ["fastapi>=0.115", "pydantic>=2.0"]
+
+[project.entry-points."agentforge.plugins"]
+stream-test = "agentforge_stream"
+
+[tool.hatch.build.targets.wheel]
+packages = ["agentforge_stream"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"agentforge_stream/plugin.json" = "agentforge_stream/plugin.json"
+"agentforge_stream/agents/stream_test_agent/AGENT.md" = "agentforge_stream/agents/stream_test_agent/AGENT.md"
+
+[dependency-groups]
+dev = ["pytest>=9.0", "httpx>=0.28"]

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "id": "stream-test",
+  "display_name": "Stream Test",
+  "version": "1.0.0",
+  "namespace": "project.stream-test",
+  "backend": {
+    "entry_point": "agentforge_stream.plugin:register",
+    "routes_prefix": "/api/stream-test",
+    "resource_providers": []
+  },
+  "agents": [
+    { "name": "stream-test-agent", "path": "agentforge_stream/agents/stream_test_agent" }
+  ],
+  "frontend": {
+    "remote_url": "",
+    "nav_label": "Stream Test",
+    "nav_icon": "Radio",
+    "route": "/stream-test"
+  }
+}
