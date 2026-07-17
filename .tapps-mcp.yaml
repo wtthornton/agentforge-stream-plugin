@@ -1,0 +1,14 @@
+cursor_stop_completion_gate: warn
+llm_engagement_level: medium
+memory:
+  brain_http_url: http://localhost:8080
+  brain_project_id: agentforge-stream-plugin
+memory_hooks:
+  auto_capture:
+    enabled: true
+    max_facts: 5
+  auto_recall:
+    enabled: true
+    max_results: 5
+    min_score: 0.3
+mcp_transport: http
