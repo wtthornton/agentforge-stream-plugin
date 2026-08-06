@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "agentforge-stream-plugin"
-version = "1.0.0"
+version = "1.1.0"
 description = "Test rig for AgentForge SSE streaming — hard-coded 3-event stream, backoff helpers."
 requires-python = ">=3.12"
 dependencies = ["fastapi>=0.115", "pydantic>=2.0"]
@@ -20,4 +20,7 @@ packages = ["agentforge_stream"]
 "agentforge_stream/agents/stream_test_agent/AGENT.md" = "agentforge_stream/agents/stream_test_agent/AGENT.md"
 
 [dependency-groups]
-dev = ["pytest>=9.0", "httpx>=0.28"]
+dev = ["pytest>=9.0", "pytest-asyncio>=1.0", "httpx>=0.28"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

@@ -21,9 +21,10 @@ _NAMESPACE = "project.stream-test"
 
 
 def register(app: FastAPI) -> None:
-    from agentforge_stream.routes import router
+    from agentforge_stream.routes import demo_router, router
 
     app.include_router(router)
+    app.include_router(demo_router)
 
     agent_loader = getattr(app.state, "agent_loader", None)
     if agent_loader is None:
