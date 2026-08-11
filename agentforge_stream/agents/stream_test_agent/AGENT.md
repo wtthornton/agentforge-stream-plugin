@@ -3,7 +3,6 @@ name: stream-test-agent
 namespace: project.stream-test.stream-test-agent
 description: Test agent for AgentForge streaming rig.
 keywords: [stream, sse, test]
-runner: agentforge_stream.agents.stream_test_agent.runner:StreamRunner
 ---
 
 # Stream Test Agent
