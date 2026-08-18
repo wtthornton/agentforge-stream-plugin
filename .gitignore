@@ -1,0 +1,6 @@
+
+# tapps-mcp local state — session markers, caches, generated indexes (fleet convention:
+# matches AgentForge and tapps-mcp .gitignore). Never commit; regenerated every session.
+.tapps-mcp/
+.tapps-mcp-cache/
+.tapps-brain/
