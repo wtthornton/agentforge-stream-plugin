@@ -4,3 +4,7 @@
 .tapps-mcp/
 .tapps-mcp-cache/
 .tapps-brain/
+
+# tapps-mcp backup churn (pre-upgrade backups, FIFO-retained; not build output)
+.tapps-mcp/backups/
+.tapps-mcp/hook-backups/
